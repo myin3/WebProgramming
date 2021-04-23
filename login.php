@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Login</title>
-  <link rel="stylesheet" type="text/css" href="project3.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <style type="text/css">
     .form-container {
       position: absolute;

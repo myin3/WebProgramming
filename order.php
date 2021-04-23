@@ -12,6 +12,7 @@
 	<?php
 
 	$query = "INSERT INTO orders(username, seat) SELECT * FROM shoppingcart WHERE username=\"".$row['username']."\"";
+	execute_query($mysqli, $query);
 
 
 	while($exit = $shoppingCart->fetch_assoc()){

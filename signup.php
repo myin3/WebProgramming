@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Create an Account</title>
-    <link rel="stylesheet" type="text/css" href="project3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
     .form-container {
       position: absolute;
@@ -53,6 +53,7 @@
   </style>
 </head>
 <body>
+  
     <div class="form-container">
     <h1 class="head">Create an Account</h1>
     <form name="Signup" action="signup-submit.php" method="POST">
