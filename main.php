@@ -63,7 +63,7 @@
 
 
 
-	//header("location:login.php");
+	header("location:menu.php");
 
 	CloseCon($mysqli);
 

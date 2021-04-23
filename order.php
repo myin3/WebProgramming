@@ -4,8 +4,7 @@
 
 	$mysqli = OpenCon();
 
-	$row = fetch('seat', 'shoppingcart');
-
+	$row = fetch('seat', 'orders');
 	$seat = $row['seat'];
 
 	$value = "SELECT * FROM flights";
