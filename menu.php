@@ -90,7 +90,7 @@
 <body>
 	<div id="bar">
 		<a href="menu.php"><button class="buttonstyle forward disabled">Home</button></a>
-		<a href=""><button class="buttonstyle forward">Flights</button></a>
+		<a href="inventory.php"><button class="buttonstyle forward">Flights</button></a>
 		<a href="shoppingCart.php"><button class="buttonstyle forward">Cart</button></a>
 		<a href="checkout.php"><button class="buttonstyle forward">Checkout</button></a>
 		<?php 

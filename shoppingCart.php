@@ -115,16 +115,18 @@
 	        }
 	        else{
 	        	$row = fetch('username', 'loggedin');
-	        	$result = "SELECT * FROM shoppingcart WHERE username=\"".$row['username']."\"";
-	        	$shoppingCart = $mysqli->query($result);
-	        	$exit = $shoppingCart->fetch_assoc();?>
-	        	<h1><?php
-	        	echo $exit['username'];
-	        	?></h1>
+	        	$result = "SELECT seat FROM shoppingcart WHERE username=\"".$row['username']."\"";
+
+	        	$shoppingCart = $mysqli->query($result);?>
+
+	        	<ul>
 	        	<?php
-	        	echo "Seat: ".$exit['seat'];
-        }
+	        	while($exit = $shoppingCart->fetch_assoc()){
+	        		echo "<li>Seat: ".$exit['seat']."</li>";
+	        	}
+        	}
 		?>
+	        	</ul>
 	</div>
 </body>
 </html>

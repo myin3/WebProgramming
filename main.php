@@ -48,10 +48,7 @@
 	$query = "DROP TABLE IF EXISTS shoppingcart"; 
 	execute_query($mysqli, $query);
 
-	$query = "CREATE TABLE shoppingcart(username varchar(20) PRIMARY KEY, seat varchar(20))";
-	execute_query($mysqli, $query);
-
-	$query = "INSERT INTO shoppingcart (username, seat) VALUES('admin', 'A1')";
+	$query = "CREATE TABLE shoppingcart(username varchar(20), seat varchar(20))";
 	execute_query($mysqli, $query);
 
 	$query = "DROP TABLE IF EXISTS orders"; 
