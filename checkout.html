@@ -5,20 +5,27 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-		
+		#container {
+			background: #eeee;
+			color: black;
+			width: 25%;
+			padding: 5px;
+			height: 50%;
+		}
 	</style>
 </head>
 <body>
 	<div id="bar">
-		<a href="menu.html"><button class="buttonstyle forward disabled">Home</button></a>
+		<a href="menu.html"><button class="buttonstyle forward">Home</button></a>
 		<a href="inventory.html"><button class="buttonstyle forward">Flights</button></a>
 		<a href=""><button class="buttonstyle forward">Cart</button></a>
-		<a href=""><button class="buttonstyle forward">Checkout</button></a>
+		<a href=""><button class="buttonstyle forward disabled">Checkout</button></a>
 		<a href=""><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">logout</span> Logout </button></a>
 		<a href=""><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">person</span> Profile </button></a>
 	</div>
 	<div id="container">
 		<form>
+			<h1>Payment Info</h1>
 			<table>
 				<tr>
 					<td>Name:</td>
