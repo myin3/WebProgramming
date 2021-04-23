@@ -54,7 +54,7 @@
 	$query = "DROP TABLE IF EXISTS orders"; 
 	execute_query($mysqli, $query);
 
-	$query = "CREATE TABLE orders(username varchar(20) PRIMARY KEY, seat varchar(20))";
+	$query = "CREATE TABLE orders(username varchar(20), seat varchar(20))";
 	execute_query($mysqli, $query);
 
 

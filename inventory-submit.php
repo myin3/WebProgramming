@@ -83,14 +83,7 @@
                 execute_query($mysqli, $query);
             }
         }
-
-    //     $num_rows = mysqli_num_rows(mysqli_query($mysqli, $result));
-    //     if($num_rows != 0){
-    //         header("location:menu.php");
-    //         exit;
-    //     } else {
-    //         header("location:login.php");
-    //         exit();
-    //     }
+    header("location:shoppingCart.php");
+    exit();
     }
     ?>

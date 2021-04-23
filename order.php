@@ -4,14 +4,22 @@
 
 	$mysqli = OpenCon();
 
-	$row = fetch('seat', 'orders');
-	$seat = $row['seat'];
+	$row = fetch('username', 'loggedin');
+	$result = "SELECT seat FROM shoppingcart WHERE username=\"".$row['username']."\"";
 
-	$value = "SELECT * FROM flights";
-	execute_query($mysqli, $value);
+	$shoppingCart = $mysqli->query($result);?>
+	<ul>
+	<?php
 
-	$query = "UPDATE flights SET avail=FALSE WHERE Seat=\"$seat\"";
-	execute_query($mysqli, $query);
+	$query = "INSERT INTO orders(username, seat) SELECT * FROM shoppingcart WHERE username=\"".$row['username']."\"";
+
+
+	while($exit = $shoppingCart->fetch_assoc()){
+		$query = "UPDATE flights SET avail=FALSE WHERE Seat=\"".$exit['seat']."\"";
+		execute_query($mysqli, $query);
+	}
+	
+	
 
 	CloseCon($mysqli);
 

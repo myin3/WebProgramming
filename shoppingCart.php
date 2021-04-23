@@ -107,6 +107,7 @@
 		<a href="user.php"><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">person</span> Profile </button></a>
 	</div>
 	<div id="container">
+
 		<?php
 	        $result = "SELECT username FROM loggedin";
 	        $num_rows = mysqli_num_rows(mysqli_query($mysqli, $result));
@@ -120,13 +121,17 @@
 	        	$shoppingCart = $mysqli->query($result);?>
 
 	        	<ul>
+        		<h1>Shopping Cart:</h1>
 	        	<?php
 	        	while($exit = $shoppingCart->fetch_assoc()){
-	        		echo "<li>Seat: ".$exit['seat']."</li>";
+	        		echo "<li>".$exit['seat']."</li>";
 	        	}
         	}
 		?>
+				<a href="order.php"><button class="orderButton">Order!</button></a>
 	        	</ul>
 	</div>
+	
+
 </body>
 </html>
