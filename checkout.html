@@ -31,15 +31,15 @@
 					<td>Name:</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="name"></td>
+					<td><input type="text" name="name" required></td>
 				</tr>
 				<tr>
 					<td>Card Number:</td>
 					<td>Security Code:</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="number" maxlength="16" size="16"></td>
-					<td><input type="text" name="security" maxlength="3" size="3"></td>
+					<td><input type="text" name="number" maxlength="16" size="16" pattern="\d{16}" title="Ensure that you input the entire credit card number" required></td>
+					<td><input type="text" name="security" maxlength="3" size="3" pattern="\d{3}" title="Please input the 3 numbered security code" required></td>
 				</tr>
 				<tr>
 					<td>Credit Card Type:</td>
@@ -96,19 +96,19 @@
 					<td>Address:</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="address"></td>
+					<td><input type="text" name="address" required></td>
 				</tr>
 				<tr>
 					<td>Billing Address:</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="billing"></td>
+					<td><input type="text" name="billing" required></td>
 				</tr>
 				<tr>
 					<td>Phone Number:</td>
 				</tr>
 				<tr>
-					<td><input type="text" id="phone" name="phone" maxlength="10" size="13" placeholder="xxx-xxx-xxxx"></td>
+					<td><input type="text" id="phone" name="phone" maxlength="10" size="13" pattern="\d{10}" title="Numbers Only" placeholder="xxx-xxx-xxxx" required></td>
 				</tr>
 			</table>
 			<input type="submit" name="submit">
