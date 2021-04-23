@@ -45,11 +45,6 @@
     <br>
     <form action="login-submit.php" method="post" name="Login_Form">
       <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
-        <?php if(isset($_SESSION['msg'])){?>
-        <tr>
-          <td colspan="2" align="center" valign="top"><?php echo $_SESSION['msg'];?></td>
-        </tr>
-        <?php } ?>
           Username:<br>
           <input name="Username" type="text" class="Input"><br>
           Password:<br>

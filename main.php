@@ -45,7 +45,25 @@
 	$query = "CREATE TABLE loggedin(username varchar(20) PRIMARY KEY)";
 	execute_query($mysqli, $query);
 
-	header("location:login.php");
+	$query = "DROP TABLE IF EXISTS shoppingcart"; 
+	execute_query($mysqli, $query);
+
+	$query = "CREATE TABLE shoppingcart(username varchar(20) PRIMARY KEY, seat varchar(20))";
+	execute_query($mysqli, $query);
+
+	$query = "INSERT INTO shoppingcart (username, seat) VALUES('admin', 'A1')";
+	execute_query($mysqli, $query);
+
+	$query = "DROP TABLE IF EXISTS orders"; 
+	execute_query($mysqli, $query);
+
+	$query = "CREATE TABLE orders(username varchar(20) PRIMARY KEY, seat varchar(20))";
+	execute_query($mysqli, $query);
+
+
+
+
+	//header("location:login.php");
 
 	CloseCon($mysqli);
 
