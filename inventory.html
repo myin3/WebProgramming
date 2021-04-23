@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seats</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style type="text/css">
+		form div {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			width: 20%;
+		}
+		[type="checkbox"]:not(:checked) + label:before,
+		[type="checkbox"]:checked + label:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1.4em;
+			height: 1.4em;
+			border: 1px solid #aaa;
+			background: #FFF;
+			border-radius: .2em;
+			box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(203, 34, 237, .2);
+			-webkit-transition: all .275s;
+			transition: all .275s;
+		}
+		[type="checkbox"]:not(:checked) + label:after,
+		[type="checkbox"]:checked + label:after {
+			content: '✕';
+			position: absolute;
+			top: .525em;
+			left: .18em;
+			font-size: 1.375em;
+			color: #CB22ED;
+			line-height: 0;
+			-webkit-transition: all .2s;
+			transition: all .2s;
+		}
+		[type="checkbox"]:not(:checked) + label:after {
+			opacity: 0;
+			-webkit-transform: scale(0) rotate(45deg);
+			transform: scale(0) rotate(45deg);
+		}
+
+		[type="checkbox"]:checked + label:after {
+			opacity: 1;
+			-webkit-transform: scale(1) rotate(0);
+			transform: scale(1) rotate(0);
+		}
+	</style>
+</head>
+<body>
+	<div id="bar">
+		<a href="menu.html"><button class="buttonstyle forward ">Home</button></a>
+		<a href="inventory.html"><button class="buttonstyle forward disabled">Flights</button></a>
+		<a href=""><button class="buttonstyle forward">Cart</button></a>
+		<a href=""><button class="buttonstyle forward">Checkout</button></a>
+		<a href=""><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">logout</span> Logout </button></a>
+		<a href=""><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">person</span> Profile </button></a>
+	</div>
+	<div id="container">
+		<form>
+			<div>
+			<input type="checkbox" id="test1">
+			<label for="test1">1</label>
+			<input type="checkbox" name="">2
+			<input type="checkbox" name="">3
+			<input type="checkbox" name="">4
+			<input type="checkbox" name="">5
+			<input type="checkbox" name="">6
+			<input type="checkbox" name="">7
+			<input type="checkbox" name="">8
+			<input type="checkbox" name="">9
+			<input type="checkbox" name="">0
+			</div>
+		<br>
+			<div>
+			<input type="checkbox" name="">1
+			<input type="checkbox" name="">2
+			<input type="checkbox" name="">3
+			<input type="checkbox" name="">4
+			<input type="checkbox" name="">5
+			<input type="checkbox" name="">6
+			<input type="checkbox" name="">7
+			<input type="checkbox" name="">8
+			<input type="checkbox" name="">9
+			<input type="checkbox" name="">0
+			</div>
+		<br>
+			<div>
+			<input type="checkbox" name="">1
+			<input type="checkbox" name="">2
+			<input type="checkbox" name="">3
+			<input type="checkbox" name="">4
+			<input type="checkbox" name="">5
+			<input type="checkbox" name="">6
+			<input type="checkbox" name="">7
+			<input type="checkbox" name="">8
+			<input type="checkbox" name="">9
+			<input type="checkbox" name="">0
+			</div>
+		<br>
+			<div>
+			<input type="checkbox" name="">1
+			<input type="checkbox" name="">2
+			<input type="checkbox" name="">3
+			<input type="checkbox" name="">4
+			<input type="checkbox" name="">5
+			<input type="checkbox" name="">6
+			<input type="checkbox" name="">7
+			<input type="checkbox" name="">8
+			<input type="checkbox" name="">9
+			<input type="checkbox" name="">0
+			</div>
+		</form>
+	</div>
+</body>
+</html>
