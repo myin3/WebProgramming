@@ -38,7 +38,7 @@
 					<td>Security Code:</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="number" maxlength="16" size="16" pattern="\d{16}" title="Ensure that you input the entire credit card number" required></td>
+					<td><input id="input" onblur="checktype()" type="text" name="number" maxlength="16" size="16" pattern="\d{16}" title="Ensure that you input the entire credit card number" required></td>
 					<td><input type="text" name="security" maxlength="3" size="3" pattern="\d{3}" title="Please input the 3 numbered security code" required></td>
 				</tr>
 				<tr>
@@ -46,12 +46,15 @@
 					<td>Expiration Date:</td>
 				</tr>
 				<tr>
+					<td id="type"></td>
+					<!--
 					<td><select>
 						<option value="VISA">VISA</option>
 						<option value="MasterCard">MasterCard</option>
 						<option value="Discover">Discover</option>
 						<option value="American Express">American Express</option>
 					</select></td>
+				-->
 					<td>
 						<select>
 							<option value="">MM</option>
@@ -114,5 +117,26 @@
 			<input type="submit" name="submit">
 		</form>
 	</div>
+	<script type="text/javascript">
+		function checktype() {
+			var num = document.getElementById("input").value;
+			//num = num.toString();
+			if (num.startsWith("4")) {
+				document.getElementById("type").innerHTML = "VISA";
+			}
+			else if (num.startsWith("65")) {
+				document.getElementById("type").innerHTML = "Discover";
+			}
+			else if (num.startsWith("34") || num.startsWith("37")) {
+				document.getElementById("type").innerHTML = "American Express";
+			}
+			else if(num.substring(0, 2) >= 51 && num.substring(0, 2) <= 55){
+				document.getElementById("type").innerHTML = "MasterCard";
+			}
+			else {
+				document.getElementById("type").innerHTML = "";
+			}
+		}
+	</script>
 </body>
 </html>
