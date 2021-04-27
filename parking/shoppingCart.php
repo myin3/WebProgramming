@@ -8,7 +8,7 @@
 <head>
 	<title>Menu</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<style type="text/css">
+		<style type="text/css">
 		body {
 			display: flex;
 			flex-direction: column;
@@ -90,7 +90,7 @@
 <body>
 	<div id="bar">
 		<a href="menu.php"><button class="buttonstyle forward ">Home</button></a>
-		<a href="inventory.php"><button class="buttonstyle forward">Parking</button></a>
+		<a href="options.php"><button class="buttonstyle forward">Parking</button></a>
 		<a href="shoppingCart.php"><button class="buttonstyle forward disabled">Cart</button></a>
 		<a href="checkout.php"><button class="buttonstyle forward">Checkout</button></a>
 		<?php 

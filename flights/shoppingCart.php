@@ -8,7 +8,7 @@
 <head>
 	<title>Menu</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<style type="text/css">
+		<style type="text/css">
 		body {
 			display: flex;
 			flex-direction: column;

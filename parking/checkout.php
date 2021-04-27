@@ -138,7 +138,19 @@
 		<?php
 		endif;
 			?>
+		<div>
+			<h1>
+				<?php
+					$row = fetch('username', 'loggedin');
+					$result = "SELECT price FROM user WHERE username=\"".$row['username']."\"";
+					$priceRow = $mysqli->query($result);
+			    	$price = $priceRow->fetch_assoc();
+					echo "$".$price['price'];
+				?>
+			</h1>
+		</div>
 	</div>
+
 	<script type="text/javascript">
 		function checktype() {
 			var num = document.getElementById("input").value;

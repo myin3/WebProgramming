@@ -27,13 +27,13 @@
 
 	//D Spots
 
-	$query = "INSERT INTO parking (Spot, avail) VALUES('D1', TRUE), ('D2', TRUE), ('D3', TRUE), ('D4', TRUE), ('D5', TRUE), ('D6', TRUE), ('D7', TRUE), ('D8', TRUE), ('D9', TRUE), ('D10', TRUE)";
-	execute_query($mysqli, $query);
+	// $query = "INSERT INTO parking (Spot, avail) VALUES('D1', TRUE), ('D2', TRUE), ('D3', TRUE), ('D4', TRUE), ('D5', TRUE), ('D6', TRUE), ('D7', TRUE), ('D8', TRUE), ('D9', TRUE), ('D10', TRUE)";
+	// execute_query($mysqli, $query);
 
 	$query = "DROP TABLE IF EXISTS user"; 
 	execute_query($mysqli, $query);
 
-	$query = "CREATE TABLE user(username varchar(20) PRIMARY KEY, password varchar(20))";
+	$query = "CREATE TABLE user(username varchar(20) PRIMARY KEY, password varchar(20), price INT)";
 	execute_query($mysqli, $query);
 
 	$query = "INSERT INTO user (username, password) VALUES('admin', 'admin')";
