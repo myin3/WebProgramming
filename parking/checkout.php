@@ -145,6 +145,7 @@
 					$result = "SELECT price FROM user WHERE username=\"".$row['username']."\"";
 					$priceRow = $mysqli->query($result);
 			    	$price = $priceRow->fetch_assoc();
+			    	// print_r($price);
 					echo "$".$price['price'];
 				?>
 			</h1>

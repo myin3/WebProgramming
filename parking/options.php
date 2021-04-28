@@ -7,6 +7,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<meta charset="utf-8">
 	<title>Time Slot Options</title>
 </head>
@@ -31,11 +32,39 @@
 	</div>
 	<div id="container">
 		<form action="inventory.php" method="post">
-			<input type="Submit" name="time" value="1AM-6AM">
-			<input type="Submit" name="time" value="6AM-9AM">
-			<input type="Submit" name="time" value="9AM-4PM">
-			<input type="Submit" name="time" value="4PM-7PM">
-			<input type="Submit" name="time" value="7PM-12AM">
+			<h1>Pick a time slot</h1>
+			<table id="timeslots">
+				<tr>
+					<th>
+						$15
+					</th>
+					<th>
+						$25
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="Submit" name="time" value="1AM-6AM">
+					</td>
+					<td>
+						<input type="Submit" name="time" value="6AM-9AM">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="Submit" name="time" value="9AM-4PM">
+					</td>
+					<td>
+						<input type="Submit" name="time" value="4PM-7PM">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="Submit" name="time" value="7PM-12AM">
+					</td>
+					
+				</tr>
+			</table>
 		</form>
 	</div>
 </body>

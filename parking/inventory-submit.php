@@ -11,16 +11,11 @@
             $parkingspot = isset($_POST['VIP']) ? $_POST['VIP'] : '';
             $query = "INSERT INTO shoppingcart(username, spot) VALUES(\"$username\", \"".$parkingspot."\")";
             execute_query($mysqli, $query);
-            $query = "UPDATE user SET price=50 WHERE username=\"$username\"";
+            $query = "UPDATE user SET price=price+100 WHERE username=\"$username\"";
             $mysqli->query($query);
         }
-        else if(isset($_POST['parkingspot'])){
-           $parkingspot = isset($_POST['parkingspot']) ? $_POST['parkingspot'] : '';
-
-
-
-
-
+        if(isset($_POST['parkingspot'])){
+            $parkingspot = isset($_POST['parkingspot']) ? $_POST['parkingspot'] : '';
             $query = "INSERT INTO shoppingcart(username, spot) VALUES(\"$username\", \"".$parkingspot."\")";
             execute_query($mysqli, $query); 
         }

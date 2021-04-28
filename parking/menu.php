@@ -39,7 +39,7 @@
 		</div>
 		<div class="content">
 			<span class="material-icons icon" style="font-size:120px;">local_parking</span>
-			<a href="inventory.php"><div class="link">
+			<a href="options.php"><div class="link">
 			<h3>Parking</h3>
 			<p>You can choose your flight and along as which seats you want from here.</p>
 			</div></a>

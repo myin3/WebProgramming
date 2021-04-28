@@ -2,6 +2,7 @@
 	$price;
 	include 'db_connection.php';
 	$mysqli = OpenCon();
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
 			?>
 				<a href="login.php"><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">login</span> Login </button></a>
 		<?php endif; ?>
-		<a href=""><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">person</span> Profile </button></a>
+		<a href="user.php"><button class="buttonstyle reverse"><span class="material-icons" style="font-size:16px;">person</span> Profile </button></a>
 	</div>
 	<div class="belownav">
 		<h1>Parking Spots</h1>
@@ -81,7 +82,7 @@
 			<label for="B10">B10</label>
 			</div>
 		<br>
-		<h1>VIP</h1>
+		<h1>VIP ($100)</h1>
 			<div>
 			<input type="radio" name="VIP" value="C1" id="C1">
 			<label for="C1">C1</label>
@@ -154,9 +155,31 @@
 					<input id="right" type="submit" value="Submit" name="submit">
 				<?php
 				}
+
+				$row = fetch('username', 'loggedin');
+				$result = "SELECT Spot FROM parking WHERE avail=0";
+				$availRow = $mysqli->query($result);
+				$num_rows = mysqli_num_rows(mysqli_query($mysqli, $result));
+				$spotArray = [];
+				for ($i=0; $i < $num_rows; $i++) { 
+					$available = $availRow->fetch_assoc();
+					$spotArray[$i] = $available['Spot'];
+				}
+				//print_r($spotArray);
 				?>
+
 			</div>	
 		</form>
 	</div>
+	<script type="text/javascript">
+		var arrayLength = "<?php echo $num_rows; ?>";
+		var spotsArr = <?php echo json_encode($spotArray); ?>;
+		for (var i = 0; i < arrayLength; i++) {
+			let doc = document.getElementById(spotsArr[i]);
+			doc.setAttribute("style", "opacity:0");
+		}
+		
+		
+	</script>
 </body>
 </html>
