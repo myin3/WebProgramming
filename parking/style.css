@@ -87,14 +87,18 @@ a {
 	width: 60%;
 	top: 10%;
 }
-.orderButton{
-	position: absolute;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	width: 60%;
-	top: 50%;
-}
 #timeslots{
 	border-spacing: 50px 5px;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #8ac4d0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  cursor: pointer;
+  margin: 5px;
 }

@@ -12,6 +12,7 @@
       width: 25%;
       border: 1px solid lightgrey;
       padding: 15px; 
+      color: black;
     }
     .head {
       text-align: center;
@@ -25,17 +26,9 @@
       border-radius: 4px;
       box-sizing: border-box;
     }
-    .button {
-      display: inline-block;
-      border-radius: 4px;
-      background-color: #8ac4d0;
-      border: none;
-      color: #FFFFFF;
-      text-align: center;
-      font-size: 14px;
-      padding: 15px;
-      cursor: pointer;
-      margin: 5px;
+    a{
+      color: blue;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -53,7 +46,7 @@
           <input name="Submit" type="submit" value="Login" class="button">
       </table>
     </form>
-    <center> Don't have an account? Create an account <a href="signup.php">here.</a></center>
+    <center> Don't have an account? Create an account <a href="signup.php">here</a></center>
   </div>
   <form action="user.php" method="post">
     <input type="hidden" name="username" value=<?php $Username ?>/>

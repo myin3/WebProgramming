@@ -44,23 +44,23 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="Submit" name="time" value="1AM-6AM">
+						<input type="Submit" name="time" value="1AM-6AM" class="button">
 					</td>
 					<td>
-						<input type="Submit" name="time" value="6AM-9AM">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="Submit" name="time" value="9AM-4PM">
-					</td>
-					<td>
-						<input type="Submit" name="time" value="4PM-7PM">
+						<input type="Submit" name="time" value="6AM-9AM" class="button">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="Submit" name="time" value="7PM-12AM">
+						<input type="Submit" name="time" value="9AM-4PM" class="button">
+					</td>
+					<td>
+						<input type="Submit" name="time" value="4PM-7PM" class="button">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="Submit" name="time" value="7PM-12AM" class="button">
 					</td>
 					
 				</tr>

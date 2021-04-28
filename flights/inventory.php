@@ -138,8 +138,26 @@
 				<input id="right" type="submit" value="Submit" name="submit">
 				<?php
 				}
+				$row = fetch('username', 'loggedin');
+				$result = "SELECT Seat FROM flights WHERE avail=0";
+				$availRow = $mysqli->query($result);
+				$num_rows = mysqli_num_rows(mysqli_query($mysqli, $result));
+				$spotArray = [];
+				for ($i=0; $i < $num_rows; $i++) { 
+					$available = $availRow->fetch_assoc();
+					$spotArray[$i] = $available['Seat'];
+				}
+				//print_r($spotArray);
 				?>
 			</div>	
+			<script type="text/javascript">
+				var arrayLength = "<?php echo $num_rows; ?>";
+				var spotsArr = <?php echo json_encode($spotArray); ?>;
+				for (var i = 0; i < arrayLength; i++) {
+					let doc = document.getElementById(spotsArr[i]);
+					doc.setAttribute("style", "opacity:0");
+				}
+			</script>
 		</form>
 	</div>
 </body>

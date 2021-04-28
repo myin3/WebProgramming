@@ -12,6 +12,7 @@
       width: 25%;
       border: 1px solid lightgrey;
       padding: 15px; 
+      color: black;
     }
     .head {
       text-align: center;
@@ -43,6 +44,7 @@
         right: 15%;
         top: 20%;
         padding: 15px; 
+        color:black;
     }
     li {
         margin: 15px; 
@@ -50,6 +52,7 @@
     h3{
       color: #e4bad4;
     }
+
   </style>
 </head>
 <body>

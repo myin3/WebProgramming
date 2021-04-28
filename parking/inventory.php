@@ -152,7 +152,7 @@
 					$query = "UPDATE user SET price=".$price." WHERE username=\"$username\"";
 					$mysqli->query($query);
 					?>
-					<input id="right" type="submit" value="Submit" name="submit">
+					<input id="right" type="submit" value="Submit" name="submit" class="button">
 				<?php
 				}
 

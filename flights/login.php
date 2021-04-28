@@ -12,6 +12,7 @@
       width: 25%;
       border: 1px solid lightgrey;
       padding: 15px; 
+      color: black;
     }
     .head {
       text-align: center;
@@ -37,6 +38,10 @@
       cursor: pointer;
       margin: 5px;
     }
+    a{
+      color: blue;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -53,7 +58,7 @@
           <input name="Submit" type="submit" value="Login" class="button">
       </table>
     </form>
-    <center> Don't have an account? Create an account <a href="signup.php">here.</a></center>
+    <center> Don't have an account? Create an account <a href="signup.php">here</a></center>
   </div>
   <form action="user.php" method="post">
     <input type="hidden" name="username" value=<?php $Username ?>/>

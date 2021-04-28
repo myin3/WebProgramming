@@ -133,7 +133,7 @@
 		        		echo "<li>".$exit['spot']."</li>";
 		        	}
 		        	?>
-		        	<a href="checkout.php"><button class="orderButton">Order!</button></a>
+		        	<a href="checkout.php"><button class="button">Order!</button></a>
 		        	<?php
         		}
         	}

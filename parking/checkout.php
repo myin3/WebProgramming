@@ -20,7 +20,7 @@
 <body>
 	<div id="bar">
 		<a href="menu.php"><button class="buttonstyle forward">Home</button></a>
-		<a href="inventory.php"><button class="buttonstyle forward">Parking</button></a>
+		<a href="options.php"><button class="buttonstyle forward">Parking</button></a>
 		<a href="shoppingCart.php"><button class="buttonstyle forward">Cart</button></a>
 		<a href="checkout.php"><button class="buttonstyle forward disabled">Checkout</button></a>
 		<?php 
@@ -133,7 +133,7 @@
 					<td><input type="text" id="phone" name="phone" maxlength="10" size="13" pattern="\d{10}" title="Numbers Only" placeholder="xxx-xxx-xxxx" required></td>
 				</tr>
 			</table>
-			<input type="submit" name="submit">
+			<input type="submit" name="submit" class="button">
 		</form>
 		<?php
 		endif;
