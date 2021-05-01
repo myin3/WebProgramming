@@ -134,7 +134,7 @@
 				$result = "SELECT username FROM loggedin";
 		        $num_rows = mysqli_num_rows(mysqli_query($mysqli, $result));
 		        if ($num_rows == 0) {
-		        	echo "Log in first to book a flight.";
+		        	echo "Log in first to book a parking spot.";
 		        }
 		        else{
 		        	?>

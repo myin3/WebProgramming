@@ -135,10 +135,6 @@
 			</table>
 			<input type="submit" name="submit" class="button">
 		</form>
-		<?php
-		endif;
-			?>
-		<div>
 			<h1>
 				<?php
 					$row = fetch('username', 'loggedin');
@@ -149,6 +145,11 @@
 					echo "$".$price['price'];
 				?>
 			</h1>
+		<?php
+		endif;
+			?>
+		<div>
+
 		</div>
 	</div>
 
